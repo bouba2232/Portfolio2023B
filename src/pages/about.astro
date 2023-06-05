@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Boubacar Tapo" description="About Boubacar Tapo">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Découvrez mon parcours et mes compétences."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/wp.jpg"
+					alt="photo boubacar dev"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Bonjour et bienvenue sur mon portfolio ! Je suis Boubacar Tapo, un développeur web et web mobile passionné, spécialisé dans la création d'applications et de sites web interactifs.
+Fort de mon expertise dans le développement web, je me suis également plongé dans le monde de la musique. En tant que vice-président de Motherland Music, j'ai eu l'opportunité de fusionner mes compétences techniques avec ma passion pour la musique.
+					</p>
+					<p>
+						Au fil des années, j'ai développé une compréhension approfondie des défis uniques auxquels sont confrontés les artistes et les professionnels de l'industrie musicale. Je suis particulièrement compétent dans la création de plateformes en ligne pour promouvoir les artistes, gérer les événements et faciliter la collaboration entre les différents acteurs du secteur.
+En tant que développeur web et networking, j'ai acquis une solide maîtrise des technologies telles que HTML, CSS, JavaScript, ainsi que des frameworks tels que React et Angular. De plus, je suis à l'aise avec les bases de données et les langages de programmation back-end tels que Node.js et PHP.
+					</p>
+					<p>
+						Ce portfolio est une vitrine de mes compétences, de mes projets passés et de mes réalisations. Vous y découvrirez mes réalisations dans le développement d'applications web , ainsi que mes contributions en tant que vice-président de Motherland Music.
+Je suis passionné par la création de solutions technologiques innovantes. Je crois fermement en la puissance du networking et de la collaboration.
+
+N'hésitez pas à explorer mes travaux et à me contacter si vous avez des projets intéressants ou si vous souhaitez simplement discuter de vos idées. Je serais ravi de contribuer à votre succès en ligne et de participer à des collaborations stimulantes.
+Merci d'avoir pris le temps de visiter mon portfolio. J'espère avoir l'occasion de travailler avec vous et de mettre mes compétences en développement web et en networking au service de votre projet.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Diplomes</h2>
+				<div class="content">
+					<p>Bac+2 Concepteur d'application.</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>Curieux, Créatif, Autonome, Organisé, Dynamique, Polyvalent, Travail en équipe</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
