@@ -1,6 +1,6 @@
 ---
 title: Existentia Services 
-publishDate: 2023-05-02 00:00:00
+publishDate: 2023-05-02 
 img: /assets/Capture1.jpg
 img_alt: image existentia
 description: |
